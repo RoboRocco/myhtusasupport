@@ -3,86 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hermida Enterprise Support</title>
+  <title>Hermida Enterprise Solutions — Support</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    /* ======== GLOBAL STYLES ======== */
+    /* RESET & GLOBAL */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    body {
+    html, body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(145deg, #0e0e0e, #1a1a1a);
-      color: white;
+      background: linear-gradient(145deg, #0a0a0a, #131313);
+      color: #ffffff;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
       padding: 40px 20px;
     }
 
-    /* ======== MAIN CONTAINER ======== */
-    .glass-box {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      max-width: 960px;
-      width: 100%;
-      box-shadow: 0 0 30px rgba(0, 200, 255, 0.1);
+    /* HEADER */
+    .branding {
       text-align: center;
+      margin-bottom: 20px;
     }
-
-    /* ======== HEADER TEXT ======== */
-    h1 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      background: linear-gradient(to right, #00d4ff, #9f00ff);
+    .branding h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #00bfff, #8a2be2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .branding p {
+      font-size: 1rem;
+      color: #cccccc;
+      margin-top: 8px;
     }
 
-    p {
-      color: #cfcfcf;
-      margin-bottom: 25px;
+    /* GLASS CARD */
+    .glass-container {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 30px rgba(0, 200, 255, 0.1);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      width: 100%;
+      max-width: 960px;
+      padding: 30px;
     }
 
-    /* ======== KNOWLEDGE BASE EMBED ======== */
     iframe {
       width: 100%;
       height: 80vh;
       border: none;
-      border-radius: 16px;
+      border-radius: 12px;
     }
 
-    /* ======== 🔧 CUSTOMIZE BELOW SAFELY ======== */
-    /* Drop your own styles here without fear of breaking stuff */
-    .glass-box:hover {
-      box-shadow: 0 0 40px rgba(100, 200, 255, 0.15);
-      transition: 0.3s ease-in-out;
+    /* OPTIONAL FOOTER */
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <div class="glass-box">
-    <h1>Hermida Enterprise Support</h1>
-    <p>Welcome to your support center. Explore docs or start a chat below.</p>
+  <div class="branding">
+    <h1>Hermida Enterprise Solutions</h1>
+    <p>Your official support center</p>
+  </div>
 
+  <div class="glass-container">
     <iframe src="https://support.crisp.chat/en/company/hermida-enterprise-solutions" allowfullscreen></iframe>
   </div>
 
-  <!-- Crisp Live Chat Widget -->
+  <footer>
+    &copy; 2025 Hermida Enterprise Solutions — All rights reserved.
+  </footer>
+
+  <!-- Crisp Chat Widget -->
   <script type="text/javascript">
     window.$crisp = [];
     window.CRISP_WEBSITE_ID = "eb5263e4-4846-4b1f-80b4-0a90d9eb237d";
     (function () {
-      d = document;
-      s = d.createElement("script");
+      var d = document;
+      var s = d.createElement("script");
       s.src = "https://client.crisp.chat/l.js";
       s.async = 1;
       d.getElementsByTagName("head")[0].appendChild(s);
